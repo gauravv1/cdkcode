@@ -1,0 +1,117 @@
+{
+  "version": "2.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "cdkcode": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/us-west-2",
+      "properties": {
+        "templateFile": "cdkcode.template.json"
+      },
+      "metadata": {
+        "/cdkcode/CdkcodeQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkcodeQueue88F5F811",
+            "trace": [
+              "new Queue (/private/var/folders/gj/r2cl49d13mg5hstkwnp1w1fsy709kc/T/jsii-kernel-pCsMOS/node_modules/@aws-cdk/aws-sqs/lib/queue.js:47:23)",
+              "/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:49",
+              "Kernel._wrapSandboxCode (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8313:20)",
+              "Kernel._create (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:26)",
+              "Kernel.create (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7600:21)",
+              "KernelHost.processRequest (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7388:28)",
+              "KernelHost.run (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7328:14)",
+              "Immediate._onImmediate (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7331:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/cdkcode/CdkcodeQueue/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkcodeQueuePolicy61B1E5F0",
+            "trace": [
+              "new QueuePolicy (/private/var/folders/gj/r2cl49d13mg5hstkwnp1w1fsy709kc/T/jsii-kernel-pCsMOS/node_modules/@aws-cdk/aws-sqs/lib/policy.js:16:9)",
+              "Queue.addToResourcePolicy (/private/var/folders/gj/r2cl49d13mg5hstkwnp1w1fsy709kc/T/jsii-kernel-pCsMOS/node_modules/@aws-cdk/aws-sqs/lib/queue-base.js:19:27)",
+              "SqsSubscription.bind (/private/var/folders/gj/r2cl49d13mg5hstkwnp1w1fsy709kc/T/jsii-kernel-pCsMOS/node_modules/@aws-cdk/aws-sns-subscriptions/lib/sqs.js:25:20)",
+              "Topic.addSubscription (/private/var/folders/gj/r2cl49d13mg5hstkwnp1w1fsy709kc/T/jsii-kernel-pCsMOS/node_modules/@aws-cdk/aws-sns/lib/topic-base.js:15:49)",
+              "/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7680:51",
+              "Kernel._wrapSandboxCode (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8313:20)",
+              "/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7680:25",
+              "Kernel._ensureSync (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8289:20)",
+              "Kernel.invoke (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7679:26)",
+              "KernelHost.processRequest (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7388:28)",
+              "KernelHost.run (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7328:14)",
+              "Immediate._onImmediate (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7331:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/cdkcode/CdkcodeQueue/cdkcodeCdkcodeTopicCBCAC98A/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkcodeQueuecdkcodeCdkcodeTopicCBCAC98A9D7B1906",
+            "trace": [
+              "new Subscription (/private/var/folders/gj/r2cl49d13mg5hstkwnp1w1fsy709kc/T/jsii-kernel-pCsMOS/node_modules/@aws-cdk/aws-sns/lib/subscription.js:29:9)",
+              "Topic.addSubscription (/private/var/folders/gj/r2cl49d13mg5hstkwnp1w1fsy709kc/T/jsii-kernel-pCsMOS/node_modules/@aws-cdk/aws-sns/lib/topic-base.js:26:9)",
+              "/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7680:51",
+              "Kernel._wrapSandboxCode (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8313:20)",
+              "/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7680:25",
+              "Kernel._ensureSync (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8289:20)",
+              "Kernel.invoke (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7679:26)",
+              "KernelHost.processRequest (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7388:28)",
+              "KernelHost.run (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7328:14)",
+              "Immediate._onImmediate (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7331:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/cdkcode/CdkcodeTopic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkcodeTopic4D4CD455",
+            "trace": [
+              "new Topic (/private/var/folders/gj/r2cl49d13mg5hstkwnp1w1fsy709kc/T/jsii-kernel-pCsMOS/node_modules/@aws-cdk/aws-sns/lib/topic.js:15:26)",
+              "/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:49",
+              "Kernel._wrapSandboxCode (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8313:20)",
+              "Kernel._create (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:26)",
+              "Kernel.create (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7600:21)",
+              "KernelHost.processRequest (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7388:28)",
+              "KernelHost.run (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7328:14)",
+              "Immediate._onImmediate (/Users/gauvr/Documents/Code/cdkcode/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7331:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cloud-assembly-schema": "1.38.0",
+      "@aws-cdk/cx-api": "1.38.0",
+      "@aws-cdk/core": "1.38.0",
+      "@aws-cdk/region-info": "1.38.0",
+      "@aws-cdk/aws-iam": "1.38.0",
+      "@aws-cdk/aws-cloudwatch": "1.38.0",
+      "@aws-cdk/aws-kms": "1.38.0",
+      "@aws-cdk/aws-sqs": "1.38.0",
+      "@aws-cdk/aws-events": "1.38.0",
+      "@aws-cdk/aws-sns": "1.38.0",
+      "@aws-cdk/aws-logs": "1.38.0",
+      "@aws-cdk/aws-s3": "1.38.0",
+      "@aws-cdk/aws-ssm": "1.38.0",
+      "@aws-cdk/aws-ec2": "1.38.0",
+      "@aws-cdk/assets": "1.38.0",
+      "@aws-cdk/aws-s3-assets": "1.38.0",
+      "@aws-cdk/aws-lambda": "1.38.0",
+      "@aws-cdk/aws-sns-subscriptions": "1.38.0",
+      "jsii-runtime": "Python/3.7.4"
+    }
+  }
+}

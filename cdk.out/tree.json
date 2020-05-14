@@ -1,0 +1,119 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "cdkcode": {
+        "id": "cdkcode",
+        "path": "cdkcode",
+        "children": {
+          "CdkcodeQueue": {
+            "id": "CdkcodeQueue",
+            "path": "cdkcode/CdkcodeQueue",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "cdkcode/CdkcodeQueue/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
+                  "aws:cdk:cloudformation:props": {
+                    "visibilityTimeout": 300
+                  }
+                }
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "cdkcode/CdkcodeQueue/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "cdkcode/CdkcodeQueue/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SQS::QueuePolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sqs:SendMessage",
+                              "Condition": {
+                                "ArnEquals": {
+                                  "aws:SourceArn": {
+                                    "Ref": "CdkcodeTopic4D4CD455"
+                                  }
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "sns.amazonaws.com"
+                              },
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "CdkcodeQueue88F5F811",
+                                  "Arn"
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "queues": [
+                          {
+                            "Ref": "CdkcodeQueue88F5F811"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "cdkcodeCdkcodeTopicCBCAC98A": {
+                "id": "cdkcodeCdkcodeTopicCBCAC98A",
+                "path": "cdkcode/CdkcodeQueue/cdkcodeCdkcodeTopicCBCAC98A",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "cdkcode/CdkcodeQueue/cdkcodeCdkcodeTopicCBCAC98A/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SNS::Subscription",
+                      "aws:cdk:cloudformation:props": {
+                        "protocol": "sqs",
+                        "topicArn": {
+                          "Ref": "CdkcodeTopic4D4CD455"
+                        },
+                        "endpoint": {
+                          "Fn::GetAtt": [
+                            "CdkcodeQueue88F5F811",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "CdkcodeTopic": {
+            "id": "CdkcodeTopic",
+            "path": "cdkcode/CdkcodeTopic",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "cdkcode/CdkcodeTopic/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SNS::Topic",
+                  "aws:cdk:cloudformation:props": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

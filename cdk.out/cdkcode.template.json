@@ -1,0 +1,75 @@
+{
+  "Resources": {
+    "CdkcodeQueue88F5F811": {
+      "Type": "AWS::SQS::Queue",
+      "Properties": {
+        "VisibilityTimeout": 300
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdkcode/CdkcodeQueue/Resource"
+      }
+    },
+    "CdkcodeQueuePolicy61B1E5F0": {
+      "Type": "AWS::SQS::QueuePolicy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sqs:SendMessage",
+              "Condition": {
+                "ArnEquals": {
+                  "aws:SourceArn": {
+                    "Ref": "CdkcodeTopic4D4CD455"
+                  }
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "sns.amazonaws.com"
+              },
+              "Resource": {
+                "Fn::GetAtt": [
+                  "CdkcodeQueue88F5F811",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Queues": [
+          {
+            "Ref": "CdkcodeQueue88F5F811"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdkcode/CdkcodeQueue/Policy/Resource"
+      }
+    },
+    "CdkcodeQueuecdkcodeCdkcodeTopicCBCAC98A9D7B1906": {
+      "Type": "AWS::SNS::Subscription",
+      "Properties": {
+        "Protocol": "sqs",
+        "TopicArn": {
+          "Ref": "CdkcodeTopic4D4CD455"
+        },
+        "Endpoint": {
+          "Fn::GetAtt": [
+            "CdkcodeQueue88F5F811",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdkcode/CdkcodeQueue/cdkcodeCdkcodeTopicCBCAC98A/Resource"
+      }
+    },
+    "CdkcodeTopic4D4CD455": {
+      "Type": "AWS::SNS::Topic",
+      "Metadata": {
+        "aws:cdk:path": "cdkcode/CdkcodeTopic/Resource"
+      }
+    }
+  }
+}
